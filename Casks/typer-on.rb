@@ -1,6 +1,6 @@
 cask "typer-on" do
-  version "0.3.0"
-  sha256 "62c72ad1f8fc80b9546eb4687bc22147d9e4276f509c883fc2120c45f3615fe0"
+  version "0.3.1"
+  sha256 "132b86835c102ec8ac1c4c7f7a96f82c19fca9f310a362f0909c36b62e6bd45b"
 
   url "https://github.com/notime2/Typer-on-macos/releases/download/v#{version}/TyperOn-#{version}.dmg"
   name "Typer On"
