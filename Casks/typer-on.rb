@@ -1,6 +1,6 @@
 cask "typer-on" do
-  version "0.3.1"
-  sha256 "132b86835c102ec8ac1c4c7f7a96f82c19fca9f310a362f0909c36b62e6bd45b"
+  version "0.4.1"
+  sha256 "33c972af77cdce7d79935b28ec4afa58b02ed11e61bd956b97a188535b391fbc"
 
   url "https://github.com/notime2/Typer-on-macos/releases/download/v#{version}/TyperOn-#{version}.dmg"
   name "Typer On"
@@ -14,8 +14,8 @@ cask "typer-on" do
 
   app "Typer On.app"
 
-  # The release is ad-hoc signed and not notarized, so Gatekeeper would block the first
-  # launch. Homebrew has already checked the sha256 above; strip quarantine on every
+  # Releases use the stable self-signed identity and are not notarized. Homebrew
+  # has already checked the sha256 above; strip quarantine on every
   # install and upgrade so users do not have to run xattr by hand.
   postflight_steps do
     run "/usr/bin/xattr", args: ["-dr", "com.apple.quarantine", "{{appdir}}/Typer On.app"]
